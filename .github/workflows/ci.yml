@@ -30,7 +30,7 @@ jobs:
       - name: Run MLflow Project
         working-directory: MLProject
         run: |
-          mlflow run .
+          mlflow run . --no-conda
 
 
       - name: Save MLflow Artifacts
