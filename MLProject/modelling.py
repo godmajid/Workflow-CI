@@ -6,7 +6,6 @@ from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 
-mlflow.set_experiment("CI-Training")
 
 df = pd.read_csv("water_potability_preprocessing.csv")
 
@@ -23,6 +22,7 @@ model.fit(X_train, y_train)
 y_pred = model.predict(X_test)
 acc = accuracy_score(y_test, y_pred)
 
+mlflow.autolog()
 mlflow.log_param("n_estimators", 100)
 mlflow.log_metric("accuracy", acc)
 
