@@ -45,7 +45,7 @@ jobs:
           MODEL_PATH=$(ls mlruns/*/*/artifacts/model | head -n 1)
           mlflow models build-docker \
             -m "$MODEL_PATH" \
-            -n water-potability-model
+            -n alfinmajid/water-potability-model
 
       - name: Docker Login
         uses: docker/login-action@v3
