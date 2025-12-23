@@ -55,4 +55,4 @@ jobs:
 
       - name: Push Docker Image
         run: |
-          docker push alfinmajid/mlflow-ci-model
+          docker push alfinmajid/water-potability-model:latest
