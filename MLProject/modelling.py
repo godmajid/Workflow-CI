@@ -26,4 +26,7 @@ mlflow.autolog()
 mlflow.log_param("n_estimators", 100)
 mlflow.log_metric("accuracy", acc)
 
-mlflow.sklearn.log_model(model, "model")
+mlflow.sklearn.log_model(
+    sk_model=model,
+    artifact_path="model"
+)
