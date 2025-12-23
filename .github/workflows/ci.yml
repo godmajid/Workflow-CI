@@ -24,7 +24,7 @@ jobs:
 
       - name: Create Conda Environment
         run: |
-          conda env create -f conda.yaml
+          conda env create -f MLProject/conda.yaml
 
 
       - name: Run MLflow Project
