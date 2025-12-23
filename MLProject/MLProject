@@ -1,7 +1,5 @@
 name: water-potability-ci
 
-conda_env: conda.yaml
-
 entry_points:
   main:
     command: "conda run -n mlflow-env python modelling.py"
